@@ -1,4 +1,5 @@
-ques : the output should be sorted by name if name is same then smaller age first
+## ques : the output should be sorted by name if name is same then smaller age first:
+``` 
 const input = [
     { name: "Sreekanth", age: 30, gender: "M" },
     { name: "Sai", age: 30, gender: "M" },
@@ -13,11 +14,11 @@ const output = [
     {"name":"Sreekanth","age":24,"gender":"M"},
     {"name":"Sreekanth","age":30,"gender":"M"}
 ]
+```
 
-
-Solution: 
-Solution1 :
- const customSort = (person1, person2) => {
+## Solution1 :
+ ```
+const customSort = (person1, person2) => {
     if(person1.name < person2.name) {
         return -1;
     }
@@ -35,8 +36,9 @@ Solution1 :
     return 0;
 }
 console.log(input.sort((person1,person2)=>customSort(person1,person2)));
-
-Solution2:
+```
+## Solution2:
+```
   const output = input.sort((firstPersonObj,secondPersonObj)=>{
     if(firstPersonObj.name.toLowerCase()<secondPersonObj.name.toLowerCase())
     {
@@ -59,3 +61,6 @@ Solution2:
 })
 
 console.log(output)
+```
+
+## Must read: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
