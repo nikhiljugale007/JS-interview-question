@@ -63,4 +63,17 @@ console.log(input.sort(customSort));
 console.log(output)
 ```
 
+## solution 3:
+```
+const output = [...input].sort((PersonObj1, PersonObj2) => {
+  if (PersonObj1.name.toLowerCase() === PersonObj2.name.toLowerCase()) {
+    return PersonObj1.age - PersonObj2.age;
+  } else if (PersonObj1.name.toLowerCase() < PersonObj2.name.toLowerCase()) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+```
+
 ## Must read: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
