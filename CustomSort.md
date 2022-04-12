@@ -35,7 +35,7 @@ const customSort = (person1, person2) => {
     }
     return 0;
 }
-console.log(input.sort((person1,person2)=>customSort(person1,person2)));
+console.log(input.sort(customSort));
 ```
 ## Solution2:
 ```
